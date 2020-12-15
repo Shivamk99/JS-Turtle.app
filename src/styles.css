@@ -1,12 +1,37 @@
+body {
+  background-color: grey;
+}
+
 .App {
   font-family: "Boogaloo, cursive";
   text-align: center;
   background: hsl(165, 6%, 86%);
   color: #030000;
+  cursor: pointer;
   border-radius: 5px;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
+  width: 90vw;
+  margin: 5rem 0;
+  max-width: 1170px;
 }
 
+.extra {
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  margin: 0.5rem 0.5rem auto 0.5rem;
+  background: #b2f8f3;
+  color: rgb(2, 0, 0);
+  text-transform: capitalize;
+}
+.todo {
+  font-family: Lora;
+  padding: 1rem 1rem;
+  color: #000c0b;
+  font-size: 1.5rem;
+}
 .add {
   font-family: sans-serif;
   text-align: center;
