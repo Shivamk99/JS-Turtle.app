@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./styles.css";
 
-enum Action {
+export enum Action {
   ADD = "ADD",
   DELETE = "DELETE",
   UNDO = "UNDO",
@@ -39,7 +39,7 @@ type Actions =
     }
   | { type: Action.UNDO | Action.REDO | Action.CLEAR };
 
-const reducer = (state: State, action: Actions): State => {
+export const reducer = (state: State, action: Actions): State => {
   switch (action.type) {
     case Action.ADD: {
       console.log(JSON.stringify(state, null, 2));
@@ -132,15 +132,17 @@ export default function App() {
 
   return (
     <div className="App">
+      <div className="todo">TODO ITEMS</div>
       <div>
         <form
-          onSubmit={(e: any) => [
+          onSubmit={(e) => [
             e.preventDefault(),
             dispatch({ type: Action.ADD, payload: formState })
           ]}
         >
           <input
             className="add"
+            id="add"
             required
             minLength={3}
             defaultValue={formState}
@@ -148,6 +150,16 @@ export default function App() {
             type="text"
             placeholder="Enter Todo"
           />
+
+          <button
+            className="extra"
+            onClick={(e: any) => [
+              e.preventDefault(),
+              dispatch({ type: Action.ADD, payload: formState })
+            ]}
+          >
+            ADD
+          </button>
         </form>
       </div>
       <div className="container">
