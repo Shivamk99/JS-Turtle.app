@@ -1,8 +1,6 @@
 # turtle.app from scratch
 > About
 
-- [Architecture](https://meet.google.com/linkredirect?authuser=0&dest=https%3A%2F%2Fexcalidraw.com%2F%23json%3D6521602787246080%2CA8Eo00jewITjDM6yBcZ93Q
-)
 1. Dependencies
    - react
    - react-dom
